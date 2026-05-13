@@ -11,3 +11,15 @@ CREATE TABLE analytics.FactRevenue
     InvoiceID INT
 );
 GO
+
+ALTER TABLE analytics.FactRevenue
+ADD CONSTRAINT FK_FactRevenue_Customer
+FOREIGN KEY (CustomerKey)
+REFERENCES analytics.DimCustomer(CustomerKey);
+GO
+
+ALTER TABLE analytics.FactRevenue
+ADD CONSTRAINT FK_FactRevenue_Date
+FOREIGN KEY (DateKey)
+REFERENCES analytics.DimDate(DateKey);
+GO
