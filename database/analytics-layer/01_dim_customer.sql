@@ -4,9 +4,11 @@ GO
 
 CREATE TABLE analytics.DimCustomer
 (
-    AccountID [uniqueidentifier] NOT NULL,
+    CustomerKey [uniqueidentifier] NOT NULL,
     AccountName VARCHAR(255),
-    PhoneNumber [nvarchar](50) NULL,
+    CustomerType VARCHAR(100),
+    State VARCHAR(100),
+    Status VARCHAR(50),
     CreatedDate DATE
 );
 GO
