@@ -10,5 +10,8 @@ INNER JOIN analytics.DimDate d
     ON f.DateKey = d.DateKey
 GROUP BY
     d.CalendarYear,
+    d.MonthName
+ORDER BY
+    d.CalendarYear,
     d.MonthName;
 GO
